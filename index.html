@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Motivational Speech Synthesis</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+
   <style>
-.playfair-display-light {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.playfair-display-regular {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.playfair-display-bold {
-  font-family: "Playfair Display", serif;
+    .gabarito-bold {
+  font-family: "Gabarito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
+  font-style: normal;
+}
+
+.gabarito-normal {
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
 }
     a {
@@ -40,24 +41,26 @@
     }
   </style>
 </head>
-<body class="playfair-display-light">
+<body class="gabarito-normal">
   <div class="flex flex-col px-4 justify-center w-full md:max-w-[900px] mx-auto">
     <!-- Title -->
-    <h1 class="text-center text-6xl font-bold mt-8 uppercase">
+    <h1 class="text-center text-5xl md:text-7xl font-bold mt-8 uppercase gabarito-bold">
       Motivational Speech Synthesis
     </h1>
-    <p class="text-center text-xl mt-4">
+    <p class="text-center text-lg md:text-xl mt-4">
       Text-to-motivational-speech with adjustable <i class="italic">motivational factor</i> to control motivational prosody
     </p>
+    <p class="text-center text-lg md:text-xl mt-4">
+      Artistic research deconstructing the performative excess of motivational western subcultures
+    </p>
     <!-- Video Section -->
-    <div class="py-4">
-      <div class="">
-        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1071213175?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Motivational Speech Synthesis"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-    </div>
+<div class="py-4 w-full aspect-video">
+  <iframe class="w-full h-full" src="https://www.youtube.com/embed/p8cmRC39UpY?si=zjNOmMTMW9w5b5WV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
     <hr class="my-4 border-gray-300">
 
-    <div>
+<div>
       <div class="grid grid-cols-3 gap-0 text-center text-xl uppercase font-bold">
         <div>
           <a href="assets/motivational-speech-synthesis.pdf" target="_blank">Prelimary Paper</a>
@@ -71,11 +74,15 @@
       </div>
     </div>
 
+
     <hr class="my-4 border-gray-300">
 
     <!-- Abstract Section -->
     <div>
       <p class="text-justify indent-8">
+
+Within the increasing popularity of fitness and entrepreneurship in western subcultures, video clips of so-called <i class="italic">motivational speech</i> received millions of views across social media. Usually, those audiovisual artifacts show excerpts from presentations or interviews of people—in most cases male business leaders, authors, and other influential figures—who narrate about the optimal instructions, principles, and strategies for success. Paired with epic and emotional background music, these videos should act as a vehicle for self-motivation and goal pursuit. Addressing a primary target group of men, success is often tied to wealthiness, professional growth, or appeal to women, while the same is obstructed by characteristics like weakness, fragility, or discontinuity. With motivational speech, a listener's ultimate goal is to obtain and shape a mindset, which ensures them to be on the right path for achievement. Motivational speech emerges as a phenomenon in a society of self-optimization, embedded in the ethos of constant productivity, self-isolation, competition, and meritocracy.
+      </p> <p class="p-2 text-justify indent-8">
         <i class="italic">Motivational speech</i> has emerged as a popular audiovisual phenomenon within Western subcultures, conveying strategies and principles for individual success through expressive, high-energy delivery. The presented paper artistically explores methods for synthesizing the distinctive prosodic patterns inherent to motivational speech, while critically examining its sociocultural foundations. Drawing on recent advances in emotion-controllable text-to-speech (TTS) systems and speech emotion recognition (SER), we employ deep learning models and frameworks to replicate and analyze motivational speech. Within our proposed architecture, we introduce a one-dimensional <i class="italic">motivational factor</i> , enabling the control of motivational prosody according to intensity. Situated within broader discourses on self-optimization and meritocracy,<i class="italic">Motivational Speech Synthesis</i> contributes to the field of emotional speech synthesis, while also prompting reflection on the societal values mediated in such narratives.
     </div>
 
@@ -85,10 +92,10 @@
       <h2 class="text-xl mt-4 uppercase font-bold mb-4">Proposed architecture</h2>
 
       <p class="text-justify indent-8 mb-4">
-        The following diagram illustrates the architecture developed for synthesizing motivational speech building ontop the <a href="https://arxiv.org/abs/2410.00316" target="_blank">EmoKnob</a> model. Motivational intensity is controlled via averaged speaker embeddings, derived by selecting and averaging speech samples corresponding to different levels of motivational intensity from our dataset. These embeddings are generated in discrete increments along our one-dimensional <i class="italic">motivational factor</i>, ranging from 0 (low intensity) to 1 (high intensity). During inference, the closest embedding is selected according to the desired <i class="italic">motivational factor</i>, enabling fine-grained emotional control of synthesized speech.
+        The following diagram illustrates our <a href="https://arxiv.org/abs/2410.00316" target="_blank">EmoKnob</a> based architecture for synthesizing motivational speech. Motivational intensity is controlled via averaged speaker embeddings, which are derived by selecting and averaging speech samples corresponding to different levels of motivational intensity within our dataset. These embeddings are generated in discrete increments along our one-dimensional <i class="italic">motivational factor</i>, ranging from 0 (low intensity) to 1 (high intensity). During inference, the closest embedding is selected according to the desired <i class="italic">motivational factor</i>, allowing precise emotional adjustment of generated speech. 
       </p>
       <div class="flex justify-center">
-        <img src="assets/architecture.png" alt="Architecture" class="w-3/4 h-auto mx-auto">
+        <img src="assets/architecture.svg" alt="Architecture" class="w-3/4 h-auto mx-auto">
       </div>
     </div>
 
@@ -99,7 +106,7 @@
       <h2 class="text-xl mt-4 uppercase font-bold mb-4">Motivational Factor</h2>
 
       <p class="text-justify indent-8 mb-4">
-        The visualization below shows a 3-dimensional representation of emotional speech samples extracted from motivational speeches, projected into a Valence-Arousal-Dominance (VAD) space. Each point represents a motivational speech segment collected from YouTube, embedded using a deep-learning-based emotion recognition model (Wav2Vec). Using the UMAP dimensionality reduction algorithm, these complex emotional patterns are compressed into a single value, called the <i class="italic">motivational factor</i>, which ranges from 0 (low motivational intensity) to 1 (high motivational intensity). Explore the interactive plot to see how emotional dimensions correspond to the motivational intensity scale.
+        The visualization below presents a 3-dimensional representation of emotional speech samples drawn from motivational speeches, projected into Valence-Arousal-Dominance (VAD) emotion space. Here, the scales range from negative to positive emotions (valence), calm to stimulated emotions (arousal), and submissive to dominant emotions (dominance). Each point represents a segment of motivational speech collected from YouTube, embedded using the deep learning-based speech emotion recognition model <a href="https://arxiv.org/abs/2203.07378" target="_blank">wav2vec 2.0</a>. To distill these complex emotional patterns into a single interpretable value, we apply the UMAP dimensionality reduction algorithm, resulting in our <i class="italic">motivational factor</i>—a continuous scale ranging from 0 (low motivational intensity) to 1 (high motivational intensity). Explore the interactive plot to observe how different datapoints align along this motivational intensity spectrum.
       </p>
 
       <div class="flex justify-center">
@@ -111,227 +118,433 @@
     
     <!-- Audio Examples Section -->
     <div>
-      <h2 class="text-xl mt-4 uppercase font-bold mb-4">Example Audios</h2>
+      <h2 class="text-xl mt-4 uppercase font-bold mb-4">Audio Examples</h2>
 
       <p class="text-justify indent-8 mb-4">
-        Below are synthesized audio samples demonstrating how the <i class="italic">motivational factor</i> influences speech prosody. We've generated audio for seven different motivational speech prompts at various motivational intensity levels, ranging from 0 (low motivational intensity) to 1 (high motivational intensity). Listen to these examples to experience how adjusting the <i class="italic">motivational factor</i> affects the expressiveness, tone, and emotional delivery of synthesized motivational speech.
+        Below are synthesized audio samples demonstrating how our <i class="italic">motivational factor</i> influences speech prosody. For each of seven motivational speech prompts, we generated audio at varying motivational intensity levels, ranging from 0.00 (low motivational intensity) to 1.00 (high motivational intensity). Listen to these examples to perceive how adjusting the <i class="italic">motivational factor</i> affects the expressiveness, tone, and emotional delivery of synthesized motivational speech.
       </p>
 
-      <div class="inline-grid grid-cols-6 gap-0">
-        <!-- Header Row -->
-        <div class="relative border border-gray-300 p-2" style="min-height: 50px;">
-          <svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0" y1="0" x2="100%" y2="100%" stroke="gray" stroke-width="1"/>
-          </svg>
-          <div class="absolute bottom-0 left-2 text-sm font-bold">Prompt</div>
-          <div class="absolute top-0 right-2 text-sm font-bold text-right">Motivational <br/> Factor</div>
-        </div>
-        <div class="text-center font-semibold border border-gray-300 p-2">0.00 <br/><br/></div>
-        <div class="text-center font-semibold border border-gray-300 p-2">0.25</div>
-        <div class="text-center font-semibold border border-gray-300 p-2">0.50</div>
-        <div class="text-center font-semibold border border-gray-300 p-2">0.75</div>
-        <div class="text-center font-semibold border border-gray-300 p-2">1.00</div>
+<!-- Container -->
+<div class="space-y-2">
+  <!-- Header Row (visible on md+) -->
+  <div class="hidden md:grid grid-cols-6 gap-0 font-bold text-center">
+    <div class="relative border border-gray-300 p-2" style="min-height: 60px;">
+      <svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0" x2="100%" y2="100%" stroke="gray" stroke-width="1"/>
+      </svg>
+      <div class="absolute bottom-0 left-2 text-sm">Prompt</div>
+      <div class="absolute top-0 right-2 text-sm text-right">Motivational<br/>Factor</div>
+    </div>
+    <div class="border border-gray-300 p-2 text-center font-semibold">0.00</div>
+    <div class="border border-gray-300 p-2 text-center font-semibold">0.25</div>
+    <div class="border border-gray-300 p-2 text-center font-semibold">0.50</div>
+    <div class="border border-gray-300 p-2 text-center font-semibold">0.75</div>
+    <div class="border border-gray-300 p-2 text-center font-semibold">1.00</div>
+  </div>
 
-        <!-- Prompt 1 -->
-        <div class="border border-gray-300 p-2">Anything you want, you can get.</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example1_mf-0.00.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example1_mf-0.25.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example1_mf-0.50.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example1_mf-0.75.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example1_mf-1.00.wav" type="audio/wav">
-          </audio>
-        </div>
+  <!-- Prompt 1 -->
+  <div class="grid grid-cols-1 md:grid-cols-6 gap-0">
+    <!-- Prompt Text -->
+    <div class="border border-gray-300 p-2">Anything you want, you can get.</div>
 
-        <!-- Prompt 2 -->
-        <div class="border border-gray-300 p-2">No goal is too far away to be reached.</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example2_mf-0.00.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example2_mf-0.25.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example2_mf-0.50.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example2_mf-0.75.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example2_mf-1.00.wav" type="audio/wav">
-          </audio>
-        </div>
-
-        <!-- Prompt 3 -->
-        <div class="border border-gray-300 p-2">Nobody is coming to save you.</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example3_mf-0.00.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example3_mf-0.25.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example3_mf-0.50.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example3_mf-0.75.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example3_mf-1.00.wav" type="audio/wav">
-          </audio>
-        </div>
-
-        <!-- Prompt 4 -->
-        <div class="border border-gray-300 p-2">Reject weakness, embrace discipline.</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example4_mf-0.00.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example4_mf-0.25.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example4_mf-0.50.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example4_mf-0.75.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example4_mf-1.00.wav" type="audio/wav">
-          </audio>
-        </div>
-
-        <!-- Prompt 5 -->
-        <div class="border border-gray-300 p-2">Seeing, believing, planning and doing it.</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example5_mf-0.00.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example5_mf-0.25.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example5_mf-0.50.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example5_mf-0.75.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example5_mf-1.00.wav" type="audio/wav">
-          </audio>
-        </div>
-
-        <!-- Prompt 6 -->
-        <div class="border border-gray-300 p-2">Work hard in silence, shock them with your success.</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example6_mf-0.00.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example6_mf-0.25.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example6_mf-0.50.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example6_mf-0.75.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example6_mf-1.00.wav" type="audio/wav">
-          </audio>
-        </div>
-
-        <!-- Prompt 7 -->
-        <div class="border border-gray-300 p-2">You are strong, resilient, consistent, focused.</div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example7_mf-0.00.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example7_mf-0.25.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example7_mf-0.50.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example7_mf-0.75.wav" type="audio/wav">
-          </audio>
-        </div>
-        <div class="flex justify-center border border-gray-300 p-2">
-          <audio controls>
-            <source src="assets/audio/example7_mf-1.00.wav" type="audio/wav">
-          </audio>
-        </div>
-
+    <!-- MF 0.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example1_mf-0.00.wav" type="audio/wav">
+        </audio>
       </div>
     </div>
 
-    <hr class="my-4 border-gray-300 mb-16">
+    <!-- MF 0.25 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.25</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example1_mf-0.25.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.50 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.50</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example1_mf-0.50.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.75 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.75</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example1_mf-0.75.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 1.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">1.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example1_mf-1.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prompt 2 -->
+  <div class="grid grid-cols-1 md:grid-cols-6 gap-0">
+    <!-- Prompt Text -->
+    <div class="border border-gray-300 p-2">No goal is too far away to be reached.</div>
+
+    <!-- MF 0.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example2_mf-0.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.25 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.25</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example2_mf-0.25.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.50 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.50</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example2_mf-0.50.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.75 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.75</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example2_mf-0.75.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 1.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">1.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example2_mf-1.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prompt 3 -->
+  <div class="grid grid-cols-1 md:grid-cols-6 gap-0">
+    <!-- Prompt Text -->
+    <div class="border border-gray-300 p-2">Nobody is coming to save you.</div>
+
+    <!-- MF 0.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example3_mf-0.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.25 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.25</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example3_mf-0.25.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.50 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.50</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example3_mf-0.50.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.75 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.75</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example3_mf-0.75.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 1.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">1.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example3_mf-1.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prompt 4 -->
+  <div class="grid grid-cols-1 md:grid-cols-6 gap-0">
+    <!-- Prompt Text -->
+    <div class="border border-gray-300 p-2">Reject weakness, embrace discipline.</div>
+
+    <!-- MF 0.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example4_mf-0.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.25 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.25</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example4_mf-0.25.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.50 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.50</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example4_mf-0.50.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.75 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.75</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example4_mf-0.75.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 1.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">1.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example4_mf-1.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prompt 5 -->
+  <div class="grid grid-cols-1 md:grid-cols-6 gap-0">
+    <!-- Prompt Text -->
+    <div class="border border-gray-300 p-2">Seeing, believing, planning and doing it.</div>
+
+    <!-- MF 0.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example5_mf-0.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.25 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.25</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example5_mf-0.25.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.50 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.50</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example5_mf-0.50.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.75 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.75</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example5_mf-0.75.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 1.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">1.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example5_mf-1.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prompt 6 -->
+  <div class="grid grid-cols-1 md:grid-cols-6 gap-0">
+    <!-- Prompt Text -->
+    <div class="border border-gray-300 p-2">Work hard in silence, shock them with your success.</div>
+
+    <!-- MF 0.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example6_mf-0.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.25 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.25</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example6_mf-0.25.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.50 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.50</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example6_mf-0.50.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.75 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.75</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example6_mf-0.75.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 1.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">1.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example6_mf-1.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prompt 7 -->
+  <div class="grid grid-cols-1 md:grid-cols-6 gap-0">
+    <!-- Prompt Text -->
+    <div class="border border-gray-300 p-2">You are strong, resilient, consistent, focused.</div>
+
+    <!-- MF 0.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example7_mf-0.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.25 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.25</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example7_mf-0.25.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.50 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.50</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example7_mf-0.50.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 0.75 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">0.75</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example7_mf-0.75.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <!-- MF 1.00 -->
+    <div class="border border-gray-300 p-2">
+      <span class="block md:hidden text-center font-semibold mb-1">1.00</span>
+      <div class="flex justify-center">
+        <audio controls>
+          <source src="assets/audio/example7_mf-1.00.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <hr class="my-4 border-gray-300">
+
+    <div>
+      <p class="text-justify indent-8 mt-4 text-xs">
+      Even though <i class="italic">Motivational Speech Synthesis</i> strives for artistic reflection, we want to emphasize, that this project does not aim to judge any person actually benefiting from motivational speech or similar phenomena. We don't expose or look at people consuming motivational speech, but rather focus on deconstructing underlying circumstances and attitudes of those narratives, which arrive as symptoms of a society driven by growth and success.
+      </p>
+    </div>
+    <div class="my-4 mb-16">
+
   </div>
 </body>
 </html>
